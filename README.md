@@ -4,6 +4,11 @@
 This project demonstrates how to deploy a minimal, secure web server on AWS using a custom VPC.  
 The objective is to show core networking skills for Cloud/DevOps roles: VPC design, routing, security group configuration, and EC2 provisioning using user data.
 
+# AWS VPC Webserver Lab
+
+This repository documents the creation of a custom VPC with public and private subnets, routing, security, and an EC2 webserver instance.  
+Screenshots are included for educational and demonstration purposes (sensitive IDs are blurred to follow security best practices).
+
 ## Architecture Components
 - Custom VPC (10.0.0.0/16)
 - Public subnet (10.0.1.0/24)
@@ -29,6 +34,8 @@ A detailed step-by-step execution will be added after running the lab.
 
 Planned sections:
 1. VPC creation  
+VPC created with CIDR 10.0.0.0/16  
+   *See: images/01-vpc-overview.png*
 2. Subnet configuration  
 3. Internet Gateway setup  
 4. Route table configuration  
