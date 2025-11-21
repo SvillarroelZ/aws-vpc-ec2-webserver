@@ -26,8 +26,10 @@ The solution is built using the following core AWS services and configurations:
 * **EC2 Instance:** Running **Amazon Linux 2** ( t3.micro).
 * **Web Server:** **Apache HTTP Server** installed automatically via a **User Data script** (`src/user-data/install-apache.sh`).
 
-An **Architecture Diagram** detailing the flow and component relationship will be added in `assets/architecture-diagram.png`.
 
+The following diagram illustrates the full architecture of this deployment, including the VPC, subnet, routing, internet gateway, security group, and EC2 instance.
+
+![Architecture Diagram](assets/architecture-diagram.png)
 ---
 
 ## 🛠️ Execution Steps and Validation
@@ -81,7 +83,16 @@ Successful deployment was validated through SSH connection and confirming the Ap
 ---
 
 ## 🧠 Lessons Learned
-*To be completed after the lab execution.*
+This activity provided valuable insights into foundational cloud networking and deployment best practices:
+
+* **Networking Mastery:** I improved my understanding of how essential a **correct configuration of routes and Security Groups** is for resources within a VPC to connect and function properly.
+* **Overcoming Challenges:** An initial difficulty involved the **public IP assignment**, which was resolved by thoroughly understanding the relationship between the network components (Subnet configuration and Route Table).
+* **Design Rationale:** I reinforced the principle of **Least Privilege** by allowing **SSH only from my source IP** and HTTP publicly for the web server.
+* **Time Management:** The experience emphasized the ability to **work focused under time pressure**.
 
 ## ✨ Improvements
-*To be completed after the lab execution.*
+To enhance the robustness and professionalism of this deployment, the following improvements are planned:
+
+* **High Availability (HA):** The current architecture is single-AZ. The next step would be to redesign it to span **multiple Availability Zones** and implement an **Auto Scaling Group** for the EC2 instance to ensure business continuity.
+* **Application Tier Separation:** Introduce a database/application tier in the **Private Subnet** (e.g., an RDS instance), isolating sensitive resources from the public internet, which is a key cloud security best practice.
+* **Infrastructure as Code (IaC):** Refactor the deployment process using **Terraform** or **CloudFormation**. This will make the environment **reproducible, version-controlled,** and scalable, moving beyond manual provisioning.
