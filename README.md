@@ -29,7 +29,7 @@ The solution is built using the following core AWS services and configurations:
 
 The following diagram illustrates the full architecture of this deployment, including the VPC, subnet, routing, internet gateway, security group, and EC2 instance.
 
-![Architecture Diagram](assets/architecture-diagram.png)
+![Architecture Diagram](assets/screenshots/architecture-diagram.png)
 ---
 
 ## 🛠️ Execution Steps and Validation
